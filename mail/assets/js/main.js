@@ -15,13 +15,10 @@ inviaBtn.addEventListener("click" , function() {
 
     //controlla che sia nella lista di chi può accedere e stampa un messaggio appropriato sull’esito del controllo
     for (var i = 0 ; i < mailList.length; i++) {
-        console.log(mailList[i]);
-    }
-    
-    if (userMail == mailList[i]) {
-        document.getElementById("message").innerHTML = "Sei stato scelto per partecipare al mio purga party!!"
-    }
-    
+        if (mailList[i] == userMail) {
+            document.getElementById("message").innerHTML = "Sei stato scelto per partecipare al mio purga party!!"
+        }
+    }  
 })
 
 
