@@ -6,8 +6,16 @@ btnSfida.addEventListener("click" , function() {
     var myPoint = Math.floor(Math.random() * 6) + 1;
     var pcPoint = Math.floor(Math.random() * 6) + 1;
 
-    document.getElementById("my_point").innerHTML = myPoint;
-    document.getElementById("pc_point").innerHTML = pcPoint;
+    document.getElementById("my_point").innerHTML = "My Score " + myPoint;
+    document.getElementById("pc_point").innerHTML = "Pc Score " + pcPoint;
+    //Stabilire il vincitore, in base a chi fa il punteggio più alto.
+    if (myPoint > pcPoint) {
+        document.getElementById("loose_or_win").innerHTML = "Congratulazioni! Hai Battuto il PC";
+    }   else if (myPoint < pcPoint) {
+        document.getElementById("loose_or_win").innerHTML = "Spiacente! Hai perso";
+    }   else {
+        document.getElementById("loose_or_win").innerHTML = "Stesso punteggio!! Ritenta";
+    }
 })
 
 
@@ -15,7 +23,6 @@ btnSfida.addEventListener("click" , function() {
 
 
 
-//Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 
 
@@ -30,10 +37,3 @@ btnSfida.addEventListener("click" , function() {
 
 
 
-
-
-
-
-
-// Che ci sia un array da qualche parte?
-// Se dobbiamo confrontare qualcosa che "cosa" ci serve?
